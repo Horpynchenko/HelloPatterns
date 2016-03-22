@@ -3,14 +3,15 @@ package com.company;
 /**
  * Created by Dmytro on 22.03.2016.
  */
-public class Runner {
-    private Strategy strategy;
+public class Runner implements Component {
+    private Target tatget;
 
-    public Runner(Strategy strategy) {
-        this.strategy = strategy;
+    public Runner(Target tatget) {
+        this.tatget = tatget;
     }
 
-    public void run() {
-        strategy.print("Hello World!");
+    @Override
+    public void run(String message) {
+        tatget.addMessages(message);
     }
 }
