@@ -3,7 +3,9 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        new Runner().run();
+        Strategy strategy = new ConsoleStrategy();
+
+        new Runner(strategy).run();
     }
 
 }
